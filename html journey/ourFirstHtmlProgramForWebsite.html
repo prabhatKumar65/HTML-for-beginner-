@@ -1,0 +1,159 @@
+
+                                                
+                                                <!-- this script is provided by www.html5freecode.com coded by: Kerixa Inc. -->
+<!-- This Script is from www.html5freecode.com, Coded by: Kerixa Inc-->
+<img src="http://www.html5freecode.com/files/mario-r.png" id="mr" style="display:none"/>
+<img src="http://www.html5freecode.com/files/mario-l.png" id="ml" style="display:none"/>
+<canvas id="myCanvas" width="400" height="230"onmouseenter="mousein()" onmouseleave="mouseout()" onclick="start()" ></canvas>
+<script>
+    var cnv = document.getElementById('myCanvas');
+    var ctx = cnv.getContext('2d');
+    var deg = Math.PI/180;
+	var mr= document.getElementById('mr'),mario=mr;
+	var ml= document.getElementById('ml');
+	var posx= 15, posy, speedX= 1, speedY= 2;
+	var jump=false, tjump=0, posj, jumpx=0, jumpfrom, tmr=0, drop=false;
+	key=new Array();
+	window.addEventListener('load', loaded, false);
+	window.addEventListener("keyup", keyup, true);
+	window.addEventListener("keydown", keydown, true);
+	var txt= 'Click to Start';
+	var w= ctx.measureText(txt).width	
+   	ctx.font= "bold 40pt serif"
+	ctx.textBaseline= 'middle'
+
+	var RadGrad= ctx.createRadialGradient(2+w/2, 100, 1, 2+w/2, 150, 180)
+	RadGrad.addColorStop(0, "rgba(1, 150, 225, 0.5)")
+	RadGrad.addColorStop(0.33, "rgba(2, 30, 225, 0.9)")
+	RadGrad.addColorStop(0.66, "rgba(78, 1, 225, 0.9)")	
+	RadGrad.addColorStop(1, "rgba(155, 1, 225, 0.5)")
+
+function loaded(){
+	posy= 220-mr.naturalHeight;
+	posj=posy
+	ctx.drawImage(mr, posx,posy);
+	DrawGeometry();
+	ctx.fillStyle="rgba(195,195,195,0.7)";
+	ctx.fillRect(10,10,380,210);
+	mouseout()
+	ctx.lineWidth=3
+    ctx.strokeStyle= "brown";		
+	ctx.strokeRect(195-170,100-30,340,60);
+}
+function start(){
+	tmr=setInterval(DrawAll, 10);}
+	
+function mousein(){
+	if (tmr==0){
+		ctx.strokeStyle='yellow';
+	    ctx.fillStyle= RadGrad;	
+	    ctx.strokeText(txt, 40, 100);
+	    ctx.fillText(txt, 40, 100);
+	}
+}
+function mouseout(){
+	if (tmr==0){
+		ctx.strokeStyle='lightgreen';
+    	ctx.fillStyle= RadGrad;	
+    	ctx.strokeText(txt, 40, 100);
+    	ctx.fillText(txt, 40, 100);
+    }
+}
+
+
+function DrawAll(){
+	ctx.clearRect(0,0,400,250);
+	if (key[27]==1){
+		clearInterval(tmr);
+	}
+
+	if (key[37]==1){
+		if (checkPos('left')==true){
+			if (jump==false)
+				posx-=speedX;
+			else
+				jumpx=-1;
+		}
+		mario= ml;
+	}
+	if (key[39]==1){
+		if (checkPos('right')==true){
+			if (jump==false)
+				posx+=speedX;
+			else
+				jumpx=1;
+		}
+		mario= mr;
+	}
+	if (key[38]==1)
+		if(jump==false){
+			jump= true;
+		}
+	if (posx<(200-mr.naturalWidth) && posy==(180-mr.naturalHeight) && jump==false)	drop=true;	
+
+	if (jump==true){
+		tjump+=speedY;
+		posy= posj-(-0.005*Math.pow(tjump,2)+tjump)
+		if (jumpx==1 && checkPos('right')==false) jumpx=0;
+		if (jumpx==-1 && checkPos('left')==false) jumpx=0;		
+		posx+= jumpx
+		if (posy>=base()){
+			jump=false
+			posy=base()
+			tjump=0
+			jumpx=0
+			posj=posy;
+		}
+	}
+	if (drop==true){
+		posy+=speedY
+		if (posy>=base()){
+			drop=false;
+			posj=base();
+		}
+	}
+	ctx.drawImage(mario, posx, posy);
+	DrawGeometry();
+}
+function base(){
+	if (posx<=(200-mr.naturalWidth)) 
+		return (220-mr.naturalHeight)
+	else
+		return (180-mr.naturalHeight)
+}
+
+function checkPos(direction){
+	switch(direction){
+		case 'right':
+			if (posx>=(390-mr.naturalWidth) ) return false;
+			if ((posx==(200-mr.naturalWidth)) && ((posy+mr.naturalHeight)>180)) return false;
+			return true;
+			break;
+		case 'left':
+			if (posx<=10) return false;
+			return true;
+			break;
+	}
+}
+
+function keydown(e){
+	key[e.keyCode]= 1;
+}
+
+function keyup(e){
+	key[e.keyCode]= 0;
+}
+
+
+function DrawGeometry(){
+    ctx.strokeStyle= "blue";	
+	ctx.lineWidth=5;	
+	ctx.strokeRect(10,10,380,210);
+	ctx.moveTo(200,180)
+	ctx.lineTo(390,180)
+	ctx.stroke();
+}
+
+</script>
+<div style="text-align: left"><font face="Tahoma"><br><a target="_blank" href="http://www.html5freecode.com"><span style="font-size: 8pt; text-decoration: none">HTML5 Free Code</span></a></font></div><a target='_blank' href='www.html5freecode.com' style='font-size: 8pt; text-decoration: none'>Html5 Free Codes</a>                                                
+                                            
