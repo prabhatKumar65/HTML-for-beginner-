@@ -12,7 +12,7 @@ Forms and user input elements
 
 Tables and organizing content
 
-🛠 Technologies I'm Using
+Technologies I'm Using
 HTML: The foundation of web pages
 
 Text Editor: Visual Studio Code
@@ -25,4 +25,4 @@ Build basic web pages
 Learn how to structure content effectively
 
 🤝 Contributions & Feedback
-I’m just getting started, so if you have any suggestions or feedback, feel free to share! I’m open to learning from others.
+I’m just getting started, so if you have any suggestions or feedback, feel free to share. I’m open to learning from others.
