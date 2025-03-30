@@ -4,7 +4,7 @@ As I start learning HTML, I’m focusing on:
 
 The structure of an HTML document
 
-HTML tags and elements (like headings, paragraphs, and lists)
+HTML tags and elements (like headings, paragraphs, and list)
 
 Links, images, and basic styling
 
