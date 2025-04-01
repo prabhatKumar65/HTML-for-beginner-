@@ -1,16 +1,16 @@
-My HTML Learning Journey
+🥰My HTML Learning Journey
 📚 What I amm Learning
 As I start learning HTML, I’m focusing on:
 
-The structure of an HTML document
+👉The structure of an HTML document
 
 HTML tags and elements (like headings, paragraphs, and list)
 
 Link, images, and basic styling
 
-Forms and user input elements
+📝Forms and user input elements
 
-Tables and organizing content
+💻Tables and organizing content
 
 Technologies I'm Using
 HTML: The foundation of web pages
