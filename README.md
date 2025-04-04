@@ -6,13 +6,13 @@ As I start learning HTML, I’m focusing on:
 
 HTML tags and elements (like headings, paragraphs, and list)
 
-Link, images, and basic styling
+Link, images, and basic styling.
 
 📝Forms and user input elements
 
 💻Tables and organizing content
 
-Technologies I'm Using
+Technologies I am Using
 HTML: The foundation of web pages
 
 Text Editor: Visual Studio Code
