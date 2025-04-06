@@ -6,7 +6,7 @@ As I start learning HTML, I’m focusing on:
 
 HTML tags and elements (like headings, paragraphs, and list)
 
-Link, images, and basic styling.
+☺️Link, images, and basic styling.
 
 📝Forms and user input elements
 
@@ -20,7 +20,7 @@ Text Editor: Visual Studio Code
 🌱 Goals for the Near Future
 Understand the different HTML tags and their uses
 
-Build basic web pages
+💻Build basic web pages
 
 Learn how to structure content effectively
 
