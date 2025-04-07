@@ -43,4 +43,4 @@ Online Resources: MDN Web Docs, W3Schools, and freeCodeCamp to support my learni
 I’m just at the beginning of my web development journey and excited to grow every day. If you're a fellow learner, developer, or mentor, I’d love to connect and learn from your experiences.
 
 ✨ Got feedback, resources, or tips? Feel free to share — I’m all ears and open to constructive input.
-Let’s grow together. 🚀
+Let’s grow together! 🚀
